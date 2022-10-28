@@ -6,6 +6,8 @@
   --color-dark-white: #bdbdbd;
   --color-pink: #fe918d;
   --color-dark-pink: #ff6863;
+  --color-green: #1c7e3c;
+  --color-white-green:#23A62F;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
@@ -58,11 +60,67 @@ h1 {
   
   p {
     font-size: var(--font-regular);
-    font-weight: var(--weight-regular);
+    font-weight: var(--wei
+    
+    ght-regular);
     color: var(--color-black);
     margin: 4px 0;
   }
 
 body{
     font-family: 'Open Sans', sans-serif;
+    margin:0;
+    cursor: default;
 }
+
+a{
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Navbar */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-green);
+    align-items: center;
+    padding: 16px;
+}
+
+.profile_img{
+    width:30px;
+}
+
+.navbar_menu{
+    display: flex;
+
+}
+
+.navbar_menu_item{
+    padding: 8px 12px;
+    margin: 0 4px;
+    color: var(--color-white);
+    cursor: pointer;
+    border-radius: 4px;
+}
+.navbar_menu_item.active{
+ border: 1px solid var(--color-white);
+
+}
+
+.navbar_menu_item:hover{
+    background-color: var(--color-white-green);
+    
+}
+
+.navbar_logo{
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    line-height: 100%;
+}
+
