@@ -98,8 +98,13 @@ button{
 .section{
     padding: 50px;
     text-align: center;
-    max-width: 1200px;
+   
     margin: auto;
+}
+
+.section_container{
+    max-width: 1200px;
+    margin:auto;
 }
 
 /* Navbar */
@@ -223,4 +228,58 @@ button{
 
 .job__period{
     font-size: var(--font-micro);
+}
+
+/* Skills */
+#skills{
+    background-color: var(--color-yellow);
+}
+
+.skillset{
+    display: flex;
+    background-color: var(--color-light-grey);
+    color: var(--color-light-white);
+    margin: 20px 0;
+}
+.skillset_left{
+flex-basis: 60%;
+padding:20px 40px ;
+background-color: var(--color-dark-grey);
+}
+
+.skillset_right{
+    flex-basis: 40%;
+}
+
+.tools{
+    background-color: var(--color-grey);
+}
+
+.skillset_title{
+    color: var(--color-white);
+    margin: 0;
+    padding-top: 10px;
+}
+.skill{
+margin-bottom: 32px;
+}
+
+.skill_description{
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill_bar{
+    width: 100%;
+    height: 5px;
+    background-color: var(--color-grey);
+}
+
+.skill_value{
+height: 5px;
+background-color: var(--color-orange);
+}
+
+.tools, .language{
+    padding: 20px;
 }
