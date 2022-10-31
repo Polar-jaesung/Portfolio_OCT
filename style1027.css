@@ -379,3 +379,30 @@ background-color: var(--color-orange);
     height: 2px;
     background-color: var(--color-dark-white);
 }
+
+/* Contact */
+#contact{
+    background-color: var(--color-green);
+}
+
+.contact_title, .contact_email, .contact__rights{
+    color: var(--color-white);
+}
+
+.contact_title{
+    margin: 32px 0;
+}
+
+.contact__links{
+    font-size: var(--font-large);
+    margin: 24px 0;
+}
+
+.contact__links i{
+    transition: all 300ms ease-in;
+}
+
+.contact__links i:hover{
+    transform: scale(1.1);
+    color: var(--color-orange);
+}
