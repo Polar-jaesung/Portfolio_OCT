@@ -109,11 +109,20 @@ button{
 
 /* Navbar */
 #navbar{
+    position: fixed;
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-green);
+    background-color: transparent;
     align-items: center;
+    width: 100%;
     padding: 16px;
+    transition: all 300ms ease;
+
+}
+
+#navbar.add_color{
+    background-color: var(--color-green);
+    padding: 8px;
 }
 
 .profile_img{
@@ -149,6 +158,7 @@ button{
 #home{
    background: url('imgs/home_back.png') center/cover no-repeat;
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
 }
 
