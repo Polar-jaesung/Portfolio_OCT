@@ -29,7 +29,7 @@ navbarMenu.addEventListener('click',(event)=>{
 
 })
 
-
+//contact me 버튼
 const contact = document.querySelector(".home_contact");
 
 contact.addEventListener('click',(event)=>{
@@ -43,3 +43,36 @@ contact.addEventListener('click',(event)=>{
         linkPosition.scrollIntoView({behavior:"smooth"});       
     }
 })
+
+//(3) 스크롤 내려가면 Home 섹션 Opacity 변경하는 이벤트
+
+const home = document.querySelector("#home");
+const homeHeight = home.getBoundingClientRect().height;
+
+
+window.addEventListener('scroll',()=>{
+    home.style.opacity= 1-window.scrollY / homeHeight;
+})
+
+//(4)화살표 애니메이션이 스크롤 조금 내려갔을때 보이기 시작
+
+const arrowUp= document.querySelector(".arrow__up");
+
+window.addEventListener('scroll',()=>{
+
+if(window.scrollY>homeHeight){
+    arrowUp.classList.add("visible");
+}
+else{
+    arrowUp.classList.remove("visible"); 
+}
+})
+
+// (4-1) 화살표 누르면 맨위로 올라오도록
+
+arrowUp.addEventListener('click',(event)=>{
+
+const link = event.target.dataset.link;
+const linkPosition =document.querySelector(link);
+    linkPosition.scrollIntoView({behavior:"smooth"});        
+});
