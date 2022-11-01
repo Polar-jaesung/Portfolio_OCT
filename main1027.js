@@ -25,7 +25,21 @@ navbarMenu.addEventListener('click',(event)=>{
     }
     else{
         linkPosition.scrollIntoView({behavior: "smooth"});
-    }
-    
+    }   
 
+})
+
+
+const contact = document.querySelector(".home_contact");
+
+contact.addEventListener('click',(event)=>{
+   
+    const link = event.target.dataset.link;
+    const linkPosition =document.querySelector(link);
+    if(link==null){
+        return;
+    }
+    else{
+        linkPosition.scrollIntoView({behavior:"smooth"});       
+    }
 })
