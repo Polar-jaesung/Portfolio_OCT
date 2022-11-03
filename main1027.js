@@ -90,6 +90,12 @@ workBtnContainer.addEventListener("click",(e)=>{
         return;
     }
     projectContainer.classList.add('fade-out');
+    const selected = document.querySelector('.catergory_btn.selected');
+    selected.classList.remove('selected');
+    const target = 
+            e.target.nodeName ==='BUTTON' ? e.target : e.target.parentNode;
+    
+            target.classList.add('selected');
 
     setTimeout(()=>{
         projects.forEach((project)=>{
@@ -103,3 +109,6 @@ workBtnContainer.addEventListener("click",(e)=>{
         projectContainer.classList.remove('fade-out');
     },300)
 })
+
+// 버튼 클릭시 액티브 되어 있도록 정리
+  

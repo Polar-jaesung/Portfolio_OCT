@@ -139,13 +139,12 @@ button{
     margin: 0 4px;
     color: var(--color-white);
     cursor: pointer;
+    border: 1px solid transparent;
     border-radius: 4px;
-}
-.navbar_menu_item.active{
- border: 1px solid var(--color-white);
 }
 
 .navbar_menu_item:hover{
+    border: 1px solid var(--color-white);
     background-color: var(--color-white-green);
 }
 
@@ -318,7 +317,7 @@ background-color: var(--color-orange);
     padding: 8px 48px;
 }
 
-.catergory_btn.active, .catergory_btn:hover{
+.catergory_btn.selected, .catergory_btn:hover{
  background-color: var(--color-orange);
  color: var(--color-white);
 }
@@ -338,7 +337,7 @@ background-color: var(--color-orange);
     transition: all 300ms ease-in;
 }
 
-.catergory_btn.active .category_cnt,
+.catergory_btn.selected .category_cnt,
 .catergory_btn:hover .category_cnt{ 
  top:0 ;
  opacity: 1;
