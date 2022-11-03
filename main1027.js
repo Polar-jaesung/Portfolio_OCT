@@ -76,3 +76,30 @@ const link = event.target.dataset.link;
 const linkPosition =document.querySelector(link);
     linkPosition.scrollIntoView({behavior:"smooth"});        
 });
+
+// 클릭시 스킬별로 프로젝트 구분해서 뜨도록 
+const workBtnContainer = document.querySelector(".work_categories");
+const projectContainer =document.querySelector(".work_projects");
+const projects = document.querySelectorAll(".project");
+
+
+workBtnContainer.addEventListener("click",(e)=>{
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+
+    if(filter==null){
+        return;
+    }
+    projectContainer.classList.add('fade-out');
+
+    setTimeout(()=>{
+        projects.forEach((project)=>{
+            if(filter==="*" || filter=== project.dataset.type){
+                project.classList.remove('invisible');
+            }
+            else{
+                project.classList.add('invisible');
+            }
+        });
+        projectContainer.classList.remove('fade-out');
+    },300)
+})
