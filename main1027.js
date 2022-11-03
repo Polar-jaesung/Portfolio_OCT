@@ -14,6 +14,10 @@ window.addEventListener('scroll',()=>{
     }
 });
 
+//Navbar 모바일 사이즈일때, 토글버튼 활성화
+const navbarToggleBtn = document.querySelector('.navbar_toggle_btn');
+
+
 // (2) 버튼클릭 시 화면 이동하는 효과 (네브바 + Contact Me)
 const navbarMenu = document.querySelector(".navbar_menu");
 
@@ -91,11 +95,12 @@ workBtnContainer.addEventListener("click",(e)=>{
     }
     projectContainer.classList.add('fade-out');
     const selected = document.querySelector('.catergory_btn.selected');
+    // 버튼 클릭시 액티브 되어 있도록 정리
     selected.classList.remove('selected');
     const target = 
             e.target.nodeName ==='BUTTON' ? e.target : e.target.parentNode;
     
-            target.classList.add('selected');
+    target.classList.add('selected');
 
     setTimeout(()=>{
         projects.forEach((project)=>{
@@ -110,5 +115,5 @@ workBtnContainer.addEventListener("click",(e)=>{
     },300)
 })
 
-// 버튼 클릭시 액티브 되어 있도록 정리
+
   
