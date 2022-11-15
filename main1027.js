@@ -33,6 +33,14 @@ navbarMenu.addEventListener('click',(event)=>{
 
 })
 
+//Navbar 모바일 사이즈일때, 토글버튼 클릭시 메뉴 열리기
+const navbarToggleBtn = document.querySelector('.navbar_toggle_btn');
+
+navbarToggleBtn.addEventListener('click',()=>{
+    navbarMenu.classList.toggle('open');
+    console.log('hello toggle');
+});
+
 //contact me 버튼
 const contact = document.querySelector(".home_contact");
 
