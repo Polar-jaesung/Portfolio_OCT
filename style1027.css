@@ -479,12 +479,23 @@ background-color: var(--color-orange);
         flex-direction: column;
         align-items: flex-start;
     }
+  
+  
+    #navbar.add_color{
+        padding: 16px;
+    }
 
     .navbar_menu{
         flex-direction: column;
         text-align: center;
         width: 100%;
         display: none;
+    }
+  
+  .navbar_menu.open{
+        display: block;
+        width: 100%;  
+        text-align: center;      
     }
 
     .about__majors{
