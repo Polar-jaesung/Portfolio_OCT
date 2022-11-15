@@ -14,8 +14,6 @@ window.addEventListener('scroll',()=>{
     }
 });
 
-//Navbar 모바일 사이즈일때, 토글버튼 활성화
-const navbarToggleBtn = document.querySelector('.navbar_toggle_btn');
 
 
 // (2) 버튼클릭 시 화면 이동하는 효과 (네브바 + Contact Me)
@@ -26,12 +24,19 @@ navbarMenu.addEventListener('click',(event)=>{
     const linkPosition = document.querySelector(link);
     if(link == null){
         return;
-    }
-    else{
+    }  
+    else{        
         linkPosition.scrollIntoView({behavior: "smooth"});
-    }   
+    } 
+});
 
-})
+//Navbar 모바일 사이즈일때, 토글버튼 클릭시 메뉴 열리기
+const navbarToggleBtn = document.querySelector('.navbar_toggle_btn');
+
+navbarToggleBtn.addEventListener('click',()=>{
+    navbarMenu.classList.toggle('open');
+    console.log('hello toggle');
+});
 
 //contact me 버튼
 const contact = document.querySelector(".home_contact");

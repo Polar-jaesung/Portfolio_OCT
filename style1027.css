@@ -405,7 +405,7 @@ background-color: var(--color-orange);
 }
 
 .projects__desc h3{
-    color: var(--color-white);
+    color: var(--color-orange);
 }
 
 .projects__desc h3:after{
@@ -413,10 +413,10 @@ background-color: var(--color-orange);
     display: block;
     position: relative;
     left: 50%;
-    margin-left: -12px;
+    transform: translateX(-50%);
     margin-top: 8px;
-    width: 25px;
-    height: 2px;
+    width: 70px;
+    height: 3px;
     background-color: var(--color-dark-white);
 }
 
@@ -478,13 +478,25 @@ background-color: var(--color-orange);
     #navbar{
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-green);
     }
+
+    #navbar.add_color{
+        padding: 16px;
+    }
+
+    
 
     .navbar_menu{
         flex-direction: column;
         text-align: center;
         width: 100%;
         display: none;
+    }
+    .navbar_menu.open{
+        display: block;
+        width: 100%;  
+        text-align: center;      
     }
 
     .about__majors{
