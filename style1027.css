@@ -470,6 +470,14 @@ background-color: var(--color-orange);
 
 /* Below 768px screen width */
 @media screen and (max-width: 768px) {
+:root{
+  --font-large: 30px;
+  --font-medium: 22px;
+  --font-regular: 15px;
+  --font-small: 13px;
+  --font-micro: 11px;
+}
+
     .navbar_toggle_btn{
         display: block;        
     }
@@ -499,11 +507,29 @@ background-color: var(--color-orange);
         text-align: center;      
     }
 
+    .section{
+        padding: 16px;
+    }
+
     .about__majors{
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
     }
     .major{
-        margin-bottom: 38px;
+        margin-bottom: 30px;
+    }
+
+    .major__icon{
+        width: 100px;
+        height: 100px;
+        font-size: 50px;
+        line-height: 100px;
+        margin: auto;
+        color: var(--color-blue);
+        border: 1px solid var(--color-blue);
+        border-radius: 50%;
+        margin-bottom: 16px;
     }
 
     .skillset{
