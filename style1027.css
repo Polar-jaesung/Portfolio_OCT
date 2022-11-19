@@ -492,8 +492,11 @@ background-color: var(--color-orange);
     #navbar.add_color{
                 padding: 16px;
     }
-
-    
+  
+  
+    #navbar.add_color{
+        padding: 16px;
+    }
 
     .navbar_menu{
         flex-direction: column;
